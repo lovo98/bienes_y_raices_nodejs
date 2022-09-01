@@ -1,16 +1,23 @@
 const formularioLogin = (req, res) => {
     res.render('auth/login', {
-        autenticado: false
+        pagina: 'Iniciar Sesion'
     });
 };
 
 const formularioRTegistro = (req, res) => {
     res.render('auth/registro', {
-        autenticado: false
+        pagina: 'Crear Cuenta'
+    });
+};
+
+const formularioOlvidePassword = (req, res) => {
+    res.render('auth/olvide-password', {
+        pagina: 'Recupera tu acceso'
     });
 };
 
 export {
     formularioLogin,
-    formularioRTegistro
+    formularioRTegistro,
+    formularioOlvidePassword
 }
