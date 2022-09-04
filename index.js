@@ -4,6 +4,7 @@ import csurf from 'csurf';
 import cookieParser from 'cookie-parser';
 // routers
 import usuarioRouter from './routers/usuarioRouter.js';
+import propiedadesRouter from './routers/propiedadesRouter.js';
 // database
 import db from './config/db.js';
 
@@ -36,6 +37,7 @@ app.use(express.static('public'));
 
 // declaracion de routing
 app.use('/auth', usuarioRouter)
+app.use("/", propiedadesRouter)
 
 app.listen(port, () => {
     console.log(`servidor en el puerto ${port}`);
