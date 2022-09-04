@@ -1,7 +1,10 @@
-import Sequelize from 'sequelize'
+import Sequelize from 'sequelize';
+import dotenv from 'dotenv';
 
-const db = new Sequelize('bienes_raices_node', 'root', '', {
-    host: 'localhost',
+dotenv.config({ paht: '.env' })
+
+const db = new Sequelize(process.env.BD, process.env.BD_USER, process.env.PASSWORD ?? '', {
+    host: process.env.HOST,
     port: 3306,
     dialect: 'mysql',
     define: {
